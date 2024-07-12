@@ -32,6 +32,24 @@ pipelines:
       - datasets/PerpetualInventory_y_1
     subgraphs: []
     dependencies: {}
+  pipelines/perpetual_inventory_details:
+    name: perpetual_inventory_details
+    description: null
+    author: ayadav@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-07-12 17:17:44'
+    datasets:
+      inputs:
+      - datasets/AccountingTransactio_2
+      - datasets/Balances_createData_2
+      - datasets/SamtecFacilitieswith_2
+      - datasets/Transactions_createData_2
+      outputs:
+      - datasets/PerpetualInventoryDe_2
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/DSN_r2s_prod_edw_alt_1:
     name: DSN_r2s_prod_edw_alt_1
@@ -145,6 +163,76 @@ datasets:
         description: ''
         author: ayadav@prophecy.io
         createdAt: '2024-07-12 17:14:39'
+  datasets/AccountingTransactio_2:
+    name: AccountingTransactio_2
+    description: 'Dataset for Imported Pipeline:perpetual_inventory_details componentName:
+      AccountingTransactio_2'
+    author: ayadav@prophecy.io
+    createdAt: '2024-07-12 17:17:36'
+    mode: batch
+    physicalDatasets:
+      Cobalt_Test:
+        fabricId: 9981
+        datasetType: File
+        description: ''
+        author: ayadav@prophecy.io
+        createdAt: '2024-07-12 17:17:36'
+  datasets/Transactions_createData_2:
+    name: Transactions_createData_2
+    description: 'Dataset for Imported Pipeline:perpetual_inventory_details componentName:
+      Transactions_createData_2'
+    author: ayadav@prophecy.io
+    createdAt: '2024-07-12 17:17:36'
+    mode: batch
+    physicalDatasets:
+      Cobalt_Test:
+        fabricId: 9981
+        datasetType: File
+        description: ''
+        author: ayadav@prophecy.io
+        createdAt: '2024-07-12 17:17:36'
+  datasets/Balances_createData_2:
+    name: Balances_createData_2
+    description: 'Dataset for Imported Pipeline:perpetual_inventory_details componentName:
+      Balances_createData_2'
+    author: ayadav@prophecy.io
+    createdAt: '2024-07-12 17:17:36'
+    mode: batch
+    physicalDatasets:
+      Cobalt_Test:
+        fabricId: 9981
+        datasetType: File
+        description: ''
+        author: ayadav@prophecy.io
+        createdAt: '2024-07-12 17:17:36'
+  datasets/SamtecFacilitieswith_2:
+    name: SamtecFacilitieswith_2
+    description: 'Dataset for Imported Pipeline:perpetual_inventory_details componentName:
+      SamtecFacilitieswith_2'
+    author: ayadav@prophecy.io
+    createdAt: '2024-07-12 17:17:36'
+    mode: batch
+    physicalDatasets:
+      Cobalt_Test:
+        fabricId: 9981
+        datasetType: Warehouse
+        description: ''
+        author: ayadav@prophecy.io
+        createdAt: '2024-07-12 17:17:36'
+  datasets/PerpetualInventoryDe_2:
+    name: PerpetualInventoryDe_2
+    description: 'Dataset for Imported Pipeline:perpetual_inventory_details componentName:
+      PerpetualInventoryDe_2'
+    author: ayadav@prophecy.io
+    createdAt: '2024-07-12 17:17:36'
+    mode: batch
+    physicalDatasets:
+      Cobalt_Test:
+        fabricId: 9981
+        datasetType: Warehouse
+        description: ''
+        author: ayadav@prophecy.io
+        createdAt: '2024-07-12 17:17:36'
 templates: {}
 jobs: {}
 gemContainer:
